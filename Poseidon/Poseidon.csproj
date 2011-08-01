@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4139A297-8C6B-40F1-B860-5CDF9007D74C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Poseidon</RootNamespace>
+    <AssemblyName>Poseidon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Poseidon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Poseidon.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Poseidon.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>External\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2012.2.608.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Telerik\RadControls for WinForms Q2 2012\Bin40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2012.2.608.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Telerik\RadControls for WinForms Q2 2012\Bin40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2012.2.608.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Telerik\RadControls for WinForms Q2 2012\Bin40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Mensagens.cs" />
+    <Compile Include="Base\Settings.cs" />
+    <Compile Include="Base\Validator.cs" />
+    <Compile Include="Business\ClienteBusiness.cs" />
+    <Compile Include="Business\ContaBusiness.cs" />
+    <Compile Include="Business\TipoUnidadeHabitacionalBusiness.cs" />
+    <Compile Include="Business\UnidadeHabitacionalBusiness.cs" />
+    <Compile Include="Business\UsuarioBusiness.cs" />
+    <Compile Include="Entity\ClienteEntity.cs" />
+    <Compile Include="Entity\ContaEntity.cs" />
+    <Compile Include="Entity\TipoUnidadeHabitacionalEntity.cs" />
+    <Compile Include="Entity\UnidadeHabitacionalEntity.cs" />
+    <Compile Include="Entity\UsuarioEntity.cs" />
+    <Compile Include="Form\ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ClienteFormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ClienteFormList.Designer.cs">
+      <DependentUpon>ClienteFormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ReservaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ReservaForm.Designer.cs">
+      <DependentUpon>ReservaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TipoUnidadeHabitacionalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TipoUnidadeHabitacionalForm.Designer.cs">
+      <DependentUpon>TipoUnidadeHabitacionalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TipoUnidadeHabitacionalFormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TipoUnidadeHabitacionalFormList.Designer.cs">
+      <DependentUpon>TipoUnidadeHabitacionalFormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UnidadeHabitacionalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UnidadeHabitacionalForm.Designer.cs">
+      <DependentUpon>UnidadeHabitacionalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UnidadeHabitacionalFormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UnidadeHabitacionalFormList.Designer.cs">
+      <DependentUpon>UnidadeHabitacionalFormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\WalkInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\WalkInForm.Designer.cs">
+      <DependentUpon>WalkInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\ClienteForm.resx">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ClienteFormList.resx">
+      <DependentUpon>ClienteFormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ReservaForm.resx">
+      <DependentUpon>ReservaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TipoUnidadeHabitacionalForm.resx">
+      <DependentUpon>TipoUnidadeHabitacionalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TipoUnidadeHabitacionalFormList.resx">
+      <DependentUpon>TipoUnidadeHabitacionalFormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UnidadeHabitacionalForm.resx">
+      <DependentUpon>UnidadeHabitacionalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UnidadeHabitacionalFormList.resx">
+      <DependentUpon>UnidadeHabitacionalFormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\WalkInForm.resx">
+      <DependentUpon>WalkInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adicionar.png" />
+    <None Include="Resources\Cancelar.gif" />
+    <None Include="Resources\Check.png" />
+    <None Include="Resources\Clientes.png" />
+    <None Include="Resources\Editar.png" />
+    <None Include="Resources\Form.ico" />
+    <None Include="Resources\FormList.ico" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\Poseidon.ico" />
+    <None Include="Resources\PoseidonBackground.png" />
+    <None Include="Resources\PoseidonStartButton.png" />
+    <None Include="Resources\Remover.png" />
+    <None Include="Resources\Reserva.png" />
+    <None Include="Resources\Salvar.gif" />
+    <None Include="Resources\Salved.png" />
+    <None Include="Resources\UnidadesHabitacionais.png" />
+    <None Include="Resources\Walk-In.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
