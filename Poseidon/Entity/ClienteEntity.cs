@@ -6,6 +6,8 @@ namespace Poseidon.Entity
     [Table(Name = "clientes")]
     public class ClienteEntity
     {
+        #region Public Properties
+
         [Column]
         public string Bairro { get; set; }
 
@@ -77,5 +79,7 @@ namespace Poseidon.Entity
 
         [Column]
         public string Veiculo { get; set; }
+
+        #endregion Public Properties
     }
 }

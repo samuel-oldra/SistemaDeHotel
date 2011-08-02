@@ -9,6 +9,8 @@ namespace Poseidon.Business
 {
     public class ContaBusiness
     {
+        #region Internal Methods
+
         internal static ContaEntity GetConta(int id)
         {
             return BuscarConta(id);
@@ -31,6 +33,12 @@ namespace Poseidon.Business
             else
                 return UpdateConta(conta);
         }
+
+        #endregion Internal Methods
+
+
+
+        #region Private Methods
 
         private static ContaEntity BuscarConta(int id)
         {
@@ -107,5 +115,7 @@ namespace Poseidon.Business
             catch
             { return false; }
         }
+
+        #endregion Private Methods
     }
 }

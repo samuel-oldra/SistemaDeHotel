@@ -9,7 +9,13 @@ namespace Poseidon.Form
 {
     public partial class ClienteForm : RadForm
     {
+        #region Private Fields
+
         private ClienteEntity cliente;
+
+        #endregion Private Fields
+
+        #region Public Constructors
 
         public ClienteForm(ClienteEntity cliente = null)
         {
@@ -23,6 +29,12 @@ namespace Poseidon.Form
             if (cliente != null) SetCliente();
             else txtNascimento.Value = DateTime.Now;
         }
+
+        #endregion Public Constructors
+
+
+
+        #region Private Methods
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -146,5 +158,7 @@ namespace Poseidon.Form
 
             txtObservacoes.Text = cliente.Observacoes;
         }
+
+        #endregion Private Methods
     }
 }
