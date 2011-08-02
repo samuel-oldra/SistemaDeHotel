@@ -7,6 +7,8 @@ namespace Poseidon.Entity
     [Table(Name = "unidades_habitacionais")]
     public class UnidadeHabitacionalEntity
     {
+        #region Public Properties
+
         [Column]
         public string Caracteristicas { get; set; }
 
@@ -39,5 +41,7 @@ namespace Poseidon.Entity
 
         [Column(CanBeNull = false)]
         public DateTime Update { get; set; }
+
+        #endregion Public Properties
     }
 }

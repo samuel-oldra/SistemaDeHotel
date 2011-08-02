@@ -6,6 +6,8 @@ namespace Poseidon
 {
     internal static class Program
     {
+        #region Private Methods
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,5 +18,7 @@ namespace Poseidon
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PrincipalForm());
         }
+
+        #endregion Private Methods
     }
 }

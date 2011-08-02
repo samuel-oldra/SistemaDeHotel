@@ -6,6 +6,8 @@ namespace Poseidon.Entity
     [Table(Name = "tipos_unidades_habitacionais")]
     public class TipoUnidadeHabitacionalEntity
     {
+        #region Public Properties
+
         [Column(CanBeNull = false)]
         public double Diaria { get; set; }
 
@@ -21,9 +23,17 @@ namespace Poseidon.Entity
         [Column(CanBeNull = false)]
         public DateTime Update { get; set; }
 
+        #endregion Public Properties
+
+
+
+        #region Public Methods
+
         public override string ToString()
         {
             return Nome;
         }
+
+        #endregion Public Methods
     }
 }

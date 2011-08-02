@@ -9,6 +9,8 @@ namespace Poseidon.Business
 {
     public class TipoUnidadeHabitacionalBusiness
     {
+        #region Internal Methods
+
         internal static List<TipoUnidadeHabitacionalEntity> GetTiposUnidadesHabitacionais()
         {
             return BuscarTiposUnidadesHabitacionais();
@@ -31,6 +33,12 @@ namespace Poseidon.Business
             else
                 return UpdateTipoUnidadeHabitacional(tipoUnidadeHabitacional);
         }
+
+        #endregion Internal Methods
+
+
+
+        #region Private Methods
 
         private static List<TipoUnidadeHabitacionalEntity> BuscarTiposUnidadesHabitacionais()
         {
@@ -107,5 +115,7 @@ namespace Poseidon.Business
             catch
             { return false; }
         }
+
+        #endregion Private Methods
     }
 }

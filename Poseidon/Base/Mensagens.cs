@@ -7,6 +7,8 @@ namespace Poseidon.Base
 {
     public class Mensagens
     {
+        #region Public Fields
+
         public static string ERRO_LOGIN = "Usuário ou senha incorreta.";
 
         public static string ERRO_REMOVER_CLIENTE = "Erro ao remover o cliente [{0}].";
@@ -35,6 +37,12 @@ namespace Poseidon.Base
         public static string SUCESSO_SALVAR_UNIDADE_HABITACIONAL = "Unidade habitacional [{0}] salva com sucesso.";
         public static string SUCESSO_SALVAR_WALKIN = "Walk-In [{0}] realizado com sucesso.";
 
+        #endregion Public Fields
+
+
+
+        #region Internal Methods
+
         internal static void Erro(string titulo, string mensagem)
         {
             RadMessageBox.Show(mensagem, titulo, MessageBoxButtons.OK, RadMessageIcon.Error);
@@ -57,5 +65,7 @@ namespace Poseidon.Base
             radDesktopAlert.ShowPinButton = false;
             radDesktopAlert.Show();
         }
+
+        #endregion Internal Methods
     }
 }

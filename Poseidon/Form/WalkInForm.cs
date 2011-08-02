@@ -11,10 +11,16 @@ namespace Poseidon.Form
 {
     public partial class WalkInForm : RadForm
     {
+        #region Private Fields
+
         private ContaEntity conta;
         private double diaria;
         private int dias;
         private DateTime dtEntrada, dtSaida;
+
+        #endregion Private Fields
+
+        #region Public Constructors
 
         public WalkInForm()
         {
@@ -41,6 +47,12 @@ namespace Poseidon.Form
             txtEntrada.Value = DateTime.Now;
             txtSaida.Value = txtEntrada.Value.AddDays(1);
         }
+
+        #endregion Public Constructors
+
+
+
+        #region Private Methods
 
         private void btnAddCliente_Click(object sender, EventArgs e)
         {
@@ -170,5 +182,7 @@ namespace Poseidon.Form
             txtValor.Text = string.Format("{0} x {1} = {2}", dias, diaria, dias * diaria);
             txtTotal.Text = string.Format("{0}", (dias * diaria) - ((dias * diaria) * (desconto / 100)));
         }
+
+        #endregion Private Methods
     }
 }
