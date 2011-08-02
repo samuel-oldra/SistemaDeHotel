@@ -7,10 +7,18 @@ namespace Poseidon.Business
 {
     public class UsuarioBusiness
     {
+        #region Internal Methods
+
         internal static bool EhUsuarioSenhaValido(UsuarioEntity usuario)
         {
             return BuscarUsuario(usuario.Usuario, usuario.Senha) != null;
         }
+
+        #endregion Internal Methods
+
+
+
+        #region Private Methods
 
         private static UsuarioEntity BuscarUsuario(string usuario, string senha)
         {
@@ -23,5 +31,7 @@ namespace Poseidon.Business
             catch
             { return null; }
         }
+
+        #endregion Private Methods
     }
 }

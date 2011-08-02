@@ -9,6 +9,8 @@ namespace Poseidon.Business
 {
     public class ClienteBusiness
     {
+        #region Internal Methods
+
         internal static ClienteEntity GetCliente(int id)
         {
             return BuscarCliente(id);
@@ -31,6 +33,12 @@ namespace Poseidon.Business
             else
                 return UpdateCliente(cliente);
         }
+
+        #endregion Internal Methods
+
+
+
+        #region Private Methods
 
         private static ClienteEntity BuscarCliente(int id)
         {
@@ -109,5 +117,7 @@ namespace Poseidon.Business
             catch
             { return false; }
         }
+
+        #endregion Private Methods
     }
 }

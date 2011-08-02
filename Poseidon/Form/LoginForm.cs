@@ -10,7 +10,13 @@ namespace Poseidon.Form
 {
     public partial class LoginForm : RadForm
     {
+        #region Private Fields
+
         private UsuarioEntity usuario;
+
+        #endregion Private Fields
+
+        #region Public Constructors
 
         public LoginForm()
         {
@@ -19,6 +25,12 @@ namespace Poseidon.Form
             Icon = Resources.Poseidon;
             btnOK.Image = Resources.OK;
         }
+
+        #endregion Public Constructors
+
+
+
+        #region Private Methods
 
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -64,5 +76,7 @@ namespace Poseidon.Form
             usuario.Usuario = txtUsuario.Text;
             usuario.Senha = txtSenha.Text;
         }
+
+        #endregion Private Methods
     }
 }

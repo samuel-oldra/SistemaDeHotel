@@ -6,6 +6,8 @@ namespace Poseidon.Entity
     [Table(Name = "contas")]
     public class ContaEntity
     {
+        #region Public Properties
+
         [Column]
         public DateTime? Check_In { get; set; }
 
@@ -44,5 +46,7 @@ namespace Poseidon.Entity
 
         [Column(CanBeNull = false)]
         public double Valor { get; set; }
+
+        #endregion Public Properties
     }
 }

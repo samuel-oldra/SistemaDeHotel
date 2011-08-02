@@ -11,6 +11,8 @@ namespace Poseidon.Form
 {
     public partial class TipoUnidadeHabitacionalFormList : RadForm
     {
+        #region Public Constructors
+
         public TipoUnidadeHabitacionalFormList()
         {
             InitializeComponent();
@@ -35,6 +37,12 @@ namespace Poseidon.Form
 
             ShowDataGrid();
         }
+
+        #endregion Public Constructors
+
+
+
+        #region Private Methods
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -113,5 +121,7 @@ namespace Poseidon.Form
         {
             gridTiposUnidadesHabitacionais.MasterTemplate.Refresh();
         }
+
+        #endregion Private Methods
     }
 }

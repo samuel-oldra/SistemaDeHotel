@@ -10,6 +10,8 @@ namespace Poseidon.Form
 {
     public partial class PrincipalForm : RadRibbonForm
     {
+        #region Public Constructors
+
         public PrincipalForm()
         {
             InitializeComponent();
@@ -30,12 +32,22 @@ namespace Poseidon.Form
             UpdateForm();
         }
 
+        #endregion Public Constructors
+
+
+
+        #region Protected Methods
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             new LoginForm().ShowDialog();
             if (Settings.Usuario == null) Close();
         }
+
+        #endregion Protected Methods
+
+        #region Private Methods
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
@@ -78,5 +90,7 @@ namespace Poseidon.Form
             btnReserva.Enabled = UnidadeHabitacionalBusiness.GetUnidadesHabitacionais().Count > 0;
             btnWalkIn.Enabled = UnidadeHabitacionalBusiness.GetUnidadesHabitacionais().Count > 0;
         }
+
+        #endregion Private Methods
     }
 }

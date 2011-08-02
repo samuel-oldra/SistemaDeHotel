@@ -9,7 +9,13 @@ namespace Poseidon.Form
 {
     public partial class UnidadeHabitacionalForm : RadForm
     {
+        #region Private Fields
+
         private UnidadeHabitacionalEntity unidadeHabitacional;
+
+        #endregion Private Fields
+
+        #region Public Constructors
 
         public UnidadeHabitacionalForm(UnidadeHabitacionalEntity unidadeHabitacional = null)
         {
@@ -31,6 +37,12 @@ namespace Poseidon.Form
             this.unidadeHabitacional = unidadeHabitacional;
             if (unidadeHabitacional != null) SetUnidadeHabitacional();
         }
+
+        #endregion Public Constructors
+
+
+
+        #region Private Methods
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -101,5 +113,7 @@ namespace Poseidon.Form
 
             txtCaracteristicas.Text = unidadeHabitacional.Caracteristicas;
         }
+
+        #endregion Private Methods
     }
 }

@@ -4,6 +4,8 @@ namespace Poseidon.Base
 {
     public class Validator
     {
+        #region Internal Methods
+
         internal static bool EhCEP(string texto)
         {
             return Regex.IsMatch(texto, "^[0-9]{5}-[0-9]{3}$");
@@ -28,5 +30,7 @@ namespace Poseidon.Base
         {
             return Regex.IsMatch(texto, "^\\([0-9]{2}\\) [0-9]{4}\\.[0-9]{4}$");
         }
+
+        #endregion Internal Methods
     }
 }

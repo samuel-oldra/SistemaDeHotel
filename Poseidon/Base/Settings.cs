@@ -7,10 +7,25 @@ namespace Poseidon.Base
 {
     public class Settings
     {
+        #region Public Fields
+
         public static readonly SQLiteConnection sqliteConnection = new SQLiteConnection(@"Data Source=Poseidon.db");
         public static DataContext dataContext = new DataContext(sqliteConnection);
+
+        #endregion Public Fields
+
+
+
+        #region Private Fields
+
         private static ClienteEntity _cliente_entity;
         private static DateTime _cliente_update = DateTime.Now;
+
+        #endregion Private Fields
+
+
+
+        #region Public Properties
 
         public static ClienteEntity Cliente
         {
@@ -28,5 +43,7 @@ namespace Poseidon.Base
         }
 
         public static UsuarioEntity Usuario { get; set; }
+
+        #endregion Public Properties
     }
 }
