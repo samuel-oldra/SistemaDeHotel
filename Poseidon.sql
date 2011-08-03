@@ -58,7 +58,7 @@ CREATE TABLE [usuarios] (
   [id] INTEGER NOT NULL PRIMARY KEY, 
   [usuario] TEXT NOT NULL, 
   [senha] TEXT NOT NULL);
-INSERT INTO "usuarios" VALUES(1,'poseidon','tridente');
+INSERT INTO "usuarios" VALUES(1,'demo','demo');
 CREATE INDEX [idx_flag_clientes] ON [clientes] ([flag]);
 CREATE INDEX [idx_flag_contas] ON [contas] ([flag]);
 CREATE INDEX [idx_flag_tipos_unidades_habitacionais] ON [tipos_unidades_habitacionais] ([flag]);
