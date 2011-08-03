@@ -67,6 +67,7 @@
             this.txtUsuario.Size = new System.Drawing.Size(215, 20);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TabStop = false;
+            this.txtUsuario.Text = "demo";
             // 
             // txtSenha
             // 
@@ -76,6 +77,7 @@
             this.txtSenha.Size = new System.Drawing.Size(128, 20);
             this.txtSenha.TabIndex = 3;
             this.txtSenha.TabStop = false;
+            this.txtSenha.Text = "demo";
             // 
             // btnOK
             // 
