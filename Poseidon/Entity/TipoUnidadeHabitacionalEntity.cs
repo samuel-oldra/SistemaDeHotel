@@ -25,8 +25,6 @@ namespace Poseidon.Entity
 
         #endregion Public Properties
 
-
-
         #region Public Methods
 
         public override string ToString()

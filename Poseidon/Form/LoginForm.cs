@@ -28,8 +28,6 @@ namespace Poseidon.Form
 
         #endregion Public Constructors
 
-
-
         #region Private Methods
 
         private void btnOK_Click(object sender, EventArgs e)

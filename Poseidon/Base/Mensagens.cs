@@ -39,8 +39,6 @@ namespace Poseidon.Base
 
         #endregion Public Fields
 
-
-
         #region Internal Methods
 
         internal static void Erro(string titulo, string mensagem)

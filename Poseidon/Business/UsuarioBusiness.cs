@@ -16,8 +16,6 @@ namespace Poseidon.Business
 
         #endregion Internal Methods
 
-
-
         #region Private Methods
 
         private static UsuarioEntity BuscarUsuario(string usuario, string senha)

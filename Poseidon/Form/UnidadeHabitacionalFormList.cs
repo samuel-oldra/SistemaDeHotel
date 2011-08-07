@@ -43,8 +43,6 @@ namespace Poseidon.Form
 
         #endregion Public Constructors
 
-
-
         #region Private Methods
 
         private void btnAdicionar_Click(object sender, EventArgs e)

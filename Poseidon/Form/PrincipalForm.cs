@@ -34,8 +34,6 @@ namespace Poseidon.Form
 
         #endregion Public Constructors
 
-
-
         #region Protected Methods
 
         protected override void OnLoad(EventArgs e)
