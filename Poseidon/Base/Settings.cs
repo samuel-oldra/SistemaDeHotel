@@ -14,16 +14,12 @@ namespace Poseidon.Base
 
         #endregion Public Fields
 
-
-
         #region Private Fields
 
         private static ClienteEntity _cliente_entity;
         private static DateTime _cliente_update = DateTime.Now;
 
         #endregion Private Fields
-
-
 
         #region Public Properties
 

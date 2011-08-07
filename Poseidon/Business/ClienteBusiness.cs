@@ -36,8 +36,6 @@ namespace Poseidon.Business
 
         #endregion Internal Methods
 
-
-
         #region Private Methods
 
         private static ClienteEntity BuscarCliente(int id)
