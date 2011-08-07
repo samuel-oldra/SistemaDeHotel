@@ -31,8 +31,6 @@ namespace Poseidon.Form
 
         #endregion Public Constructors
 
-
-
         #region Private Methods
 
         private void btnCancelar_Click(object sender, EventArgs e)
